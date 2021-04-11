@@ -1,0 +1,13 @@
+// 配置所有项目
+subprojects {
+    ext {
+        // 日志
+        log4jVersion = "2.14.1"
+        slf4jVersion = "1.7.25"
+    }
+
+    dependencies {
+        implementation("org.apache.logging.log4j:log4j-api:${log4jVersion}")
+        implementation("org.apache.logging.log4j:log4j-core:${log4jVersion}")
+    }
+}
