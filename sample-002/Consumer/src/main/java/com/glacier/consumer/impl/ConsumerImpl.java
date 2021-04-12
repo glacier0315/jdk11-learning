@@ -24,6 +24,7 @@ public class ConsumerImpl implements Consumer {
      */
     @Override
     public String accpept(String name) {
+        System.out.println(this.getClass() + "\t" + name);
         logger.info("accept {}", name);
         return producer.accpept(name);
     }
@@ -36,6 +37,7 @@ public class ConsumerImpl implements Consumer {
      */
     @Override
     public String reject(String name) {
+        System.out.println(this.getClass() + "\t" + name);
         logger.info("reject {}", name);
         return producer.reject(name);
     }

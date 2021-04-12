@@ -1,6 +1,6 @@
 // 配置所有项目
 subprojects {
-    apply plugin: 'java'
+    apply plugin: 'java-library'
 
     // 指定jdk版本
     java {
@@ -36,10 +36,14 @@ subprojects {
         testImplementation("org.junit.jupiter:junit-jupiter:${junitVersion}")
     }
 
-
-    // 设置编码为UTF-8
     tasks.withType(JavaCompile) {
+        // 设置编码为UTF-8
         options.encoding = "UTF-8"
+        doFirst {
+            options.compilerArgs += [
+                    '--module-path', classpath.asPath
+            ]
+        }
     }
 
     //配置 删除文件夹

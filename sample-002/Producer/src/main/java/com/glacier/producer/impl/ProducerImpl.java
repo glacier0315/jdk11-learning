@@ -21,6 +21,7 @@ public class ProducerImpl implements Producer {
      */
     @Override
     public String accpept(String name) {
+        System.out.println(this.getClass() + "\t" + name);
         logger.info("accept {}", name);
         return name;
     }
@@ -33,6 +34,7 @@ public class ProducerImpl implements Producer {
      */
     @Override
     public String reject(String name) {
+        System.out.println(this.getClass() + "\t" + name);
         logger.info("reject {}", name);
         return name;
     }

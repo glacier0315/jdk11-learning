@@ -1,3 +1,13 @@
+plugins {
+    id 'application'
+}
+
 dependencies {
     implementation project(":sample-002:Consumer")
+}
+
+
+application {
+    mainModule = 'com.glacier.base'
+    mainClass = 'com.glacier.base.App'
 }

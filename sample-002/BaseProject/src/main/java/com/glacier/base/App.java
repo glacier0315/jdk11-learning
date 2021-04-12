@@ -11,6 +11,7 @@ import com.glacier.consumer.impl.ConsumerImpl;
 public class App {
 
     public static void main(String[] args) {
+        System.out.println("app");
         var consumer = new ConsumerImpl();
         consumer.accpept("hello");
     }
