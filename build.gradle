@@ -3,11 +3,8 @@ subprojects {
     apply plugin: 'java-library'
 
     // 指定jdk版本
-    java {
-        toolchain {
-            languageVersion = JavaLanguageVersion.of(11)
-        }
-    }
+    sourceCompatibility = 11
+    targetCompatibility = 11
 
     group = 'com.glacier'
     description = 'jdk11-learning'
