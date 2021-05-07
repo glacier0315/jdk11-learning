@@ -5,9 +5,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
+ * date 2021-05-07 17:31
+ *
  * @author glacier
- * @version v1.0.0
- * @since <pre>2017/4/15 0015</pre>
+ * @version 1.0
  */
 @RestController
 public class IndexController {

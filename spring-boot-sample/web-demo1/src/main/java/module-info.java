@@ -13,6 +13,7 @@ module com.glacier.sample.web.demo1App {
     requires spring.boot.autoconfigure;
     requires com.fasterxml.jackson.databind;
     requires org.apache.tomcat.embed.core;
+    requires org.apache.commons.lang3;
     
     exports com.glacier;
 }

@@ -5,9 +5,10 @@ import java.time.LocalDate;
 import java.util.Objects;
 
 /**
+ * date 2021-05-07 17:31
+ *
  * @author glacier
- * @version v1.0.0
- * @since <pre>2017/4/13 0013</pre>
+ * @version 1.0
  */
 public class User implements Serializable {
     private static final long serialVersionUID = -3311756751335792019L;

@@ -2,6 +2,9 @@ package com.glacier.service.impl;
 
 import com.glacier.domain.User;
 import com.glacier.service.UserService;
+import org.apache.commons.lang3.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
@@ -14,13 +17,14 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 /**
+ * date 2021-05-07 17:31
+ *
  * @author glacier
  * @version 1.0
- * @date 2020-10-16 15:04
  */
 @Service("userService")
 public class UserServiceImpl implements UserService {
-
+    private static final Logger LOGGER = LoggerFactory.getLogger(UserServiceImpl.class);
     private final Set<User> users = new HashSet<>(200);
 
     @PostConstruct
@@ -52,6 +56,10 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public List<User> findList(User user) {
+        if (user != null
+                && StringUtils.isNotBlank(user.getUsername())) {
+            LOGGER.info("user {}", user);
+        }
         return this.users.parallelStream()
                 .limit(10)
                 .collect(Collectors.toList());
