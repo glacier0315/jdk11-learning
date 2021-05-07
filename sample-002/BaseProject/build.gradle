@@ -8,6 +8,5 @@ dependencies {
 
 
 application {
-    mainModule = 'com.glacier.base'
     mainClass = 'com.glacier.base.App'
 }

@@ -1,5 +1,3 @@
 dependencies {
     implementation project(":sample-002:Producer")
-
-//    implementation("org.apache.logging.log4j:log4j-core:${log4jVersion}")
 }
