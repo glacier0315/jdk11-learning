@@ -18,3 +18,4 @@ include('poi-sample:demo1')
 
 
 include('spring-boot-sample:web-demo1')
+include('spring-boot-sample:poi-demo1')
