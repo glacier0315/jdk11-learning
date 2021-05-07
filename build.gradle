@@ -1,6 +1,7 @@
 // 配置所有项目
 subprojects {
     apply plugin: 'java-library'
+    apply from: "$rootDir/version.gradle"
 
     // 指定jdk版本
     sourceCompatibility = 11

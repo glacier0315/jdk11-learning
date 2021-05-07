@@ -1,0 +1,27 @@
+// 定义插件版本,不立即应用
+plugins {
+    id "org.springframework.boot" version "${springBootVersion}" apply false
+}
+
+// 配置所有项目
+subprojects {
+    apply plugin: 'io.spring.dependency-management'
+    apply plugin: 'org.springframework.boot'
+
+    dependencyManagement {
+        // 导入依赖管理
+        imports {
+            mavenBom "org.springframework.boot:spring-boot-dependencies:${springBootVersion}"
+        }
+    }
+
+    dependencies {
+        implementation('org.springframework.boot:spring-boot-starter-actuator')
+
+        testImplementation('org.springframework.boot:spring-boot-starter-test') {
+            exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+        }
+
+        developmentOnly("org.springframework.boot:spring-boot-devtools")
+    }
+}

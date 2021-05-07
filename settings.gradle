@@ -13,3 +13,6 @@ include('sample-001')
 include('sample-002:BaseProject')
 include('sample-002:Consumer')
 include('sample-002:Producer')
+
+
+include('spring-boot-sample:web-demo1')
